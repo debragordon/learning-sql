@@ -3,7 +3,6 @@ line_items_per_invoice.sql: Looking at the InvoiceLine table, provide a query th
 ***/
 SELECT DISTINCT
   InvoiceId,
-  COUNT(distinct InvoiceLineId) as "Invoice Lines"
+  COUNT(distinct InvoiceLineId) AS "Invoice Lines"
 FROM InvoiceLine
-GROUP BY
-  InvoiceId
+GROUP BY InvoiceId

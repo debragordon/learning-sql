@@ -7,5 +7,4 @@ SELECT distinct
   COUNT(distinct InvoiceId) AS "Total Invoices"
 FROM Invoice
 WHERE strftime('%Y',InvoiceDate) IN ('2009','2011')
-GROUP BY
-  strftime('%Y',InvoiceDate)
+GROUP BY strftime('%Y',InvoiceDate)

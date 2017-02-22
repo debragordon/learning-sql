@@ -5,9 +5,9 @@ sales_agent_invoices.sql: Provide a query that shows the invoices associated wit
 SELECT DISTINCT
   E.FirstName || " " || E.LastName AS "Sales Agent",
   I.*
-FROM Invoice as I
-JOIN Customer as C
-ON I.CustomerId = C.CustomerId
-JOIN Employee as E
-ON C.SupportRepId = E.EmployeeId
+FROM Invoice AS I
+JOIN Customer AS C
+ON I.CustomerId == C.CustomerId
+JOIN Employee AS E
+ON C.SupportRepId == E.EmployeeId
 ORDER BY E.FirstName || " " || E.LastName

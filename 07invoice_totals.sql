@@ -9,7 +9,7 @@ SELECT DISTINCT
   C.Country
 FROM Invoice AS I
 JOIN Customer AS C
-ON I.CustomerId = C.CustomerId
+ON I.CustomerId == C.CustomerId
 JOIN Employee AS E
-ON C.SupportRepId = E.EmployeeId
+ON C.SupportRepId == E.EmployeeId
 ORDER BY E.FirstName || " " || E.LastName

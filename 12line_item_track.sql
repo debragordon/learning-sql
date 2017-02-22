@@ -5,6 +5,6 @@ line_item_track.sql: Provide a query that includes the purchased track name with
 SELECT DISTINCT
   T.Name AS "Track Name",
   I.*
-FROM InvoiceLine as I
-JOIN Track as T
-ON I.TrackId = T.TrackId
+FROM InvoiceLine AS I
+JOIN Track AS T
+ON I.TrackId == T.TrackId

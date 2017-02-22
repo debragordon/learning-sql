@@ -3,4 +3,4 @@ unique_invoice_countries.sql: Provide a query showing a unique/distinct list of 
 ***/
 SELECT DISTINCT BillingCountry
 FROM Invoice
-ORDER BY BillingCountry asc
+ORDER BY BillingCountry ASC
